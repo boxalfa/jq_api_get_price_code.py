@@ -14,21 +14,22 @@ import sys
 
 # J-Quants API 株価情報取得項目
 # 
-# 1 変数名	説明	型	例
-# 2 Code	銘柄コード	String	86970
-# 3 Date	日付	String	20170113
-# 4 Open	始値（調整前）	Number	1683
-# 5 Close	終値（調整前）	Number	1692
-# 6 Low	安値（調整前）	Number	1673
-# 7 High	高値（調整前）	Number	1704
-# 8 Volume	取引高（調整前）	Number	1646200
-# 9 TurnoverValue	取引代金	Number	2778858800
-# 10 AdjustmentFactor	調整係数	Number	0.5（株式分割1:2の例）
-# 11 AdjustmentOpen	調整済み始値	Number	841.5
-# 12 AdjustmentClose	調整済み終値	Number	846
-# 13 AdjustmentLow	調整済み安値	Number	836.5
-# 14 AdjustmentHigh	調整済み高値	Number	852
-# 15 AdjustmentVolume	調整済み取引高	Number	3292400
+#  0 変数名	説明	型	例
+#  1 Code	銘柄コード	String	86970
+#  2 Date	日付	String	20170113
+#  3 Open	始値（調整前）	Number	1683
+#  4 Close	終値（調整前）	Number	1692
+#  5 Low	安値（調整前）	Number	1673
+#  6 High	高値（調整前）	Number	1704
+#  7 Volume	取引高（調整前）	Number	1646200
+#  8 TurnoverValue	取引代金	Number	2778858800
+#  9 AdjustmentFactor	調整係数	Number	0.5（株式分割1:2の例）
+# 10 AdjustmentOpen	調整済み始値	Number	841.5
+# 11 AdjustmentClose	調整済み終値	Number	846
+# 12 AdjustmentLow	調整済み安値	Number	836.5
+# 13 AdjustmentHigh	調整済み高値	Number	852
+# 14 AdjustmentVolume	調整済み取引高	Number	3292400
+
 
 
 # ---------------------------------------------
@@ -74,7 +75,7 @@ def func_get_parameter(sys_argv) :
                     str_code = sys_argv[i][5:]
                 else :
                     print('銘柄コードは4桁又は5桁で指定して下さい。')
-                    print('例: code=[1301] 又は code=[13010]')
+                    print('例: code=1301 又は code=13010')
                     exit()
             elif sys_argv[i][:5] == 'from=' :
                 if len(sys_argv[i][5:]) == 8 :
