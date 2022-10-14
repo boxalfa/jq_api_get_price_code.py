@@ -281,6 +281,7 @@ def func_query_api(str_idToken, str_url):
         # 403: {"Message":"Access Denied"}
         # -----------------------------------------
         print('status_code:', resp.status_code)
+        dic_resp = json.loads(resp.text)
         if resp.status_code == 400 or resp.status_code == 401 :
             print('message    :', dic_resp.get('message'))
         elif resp.status_code == 403 :
